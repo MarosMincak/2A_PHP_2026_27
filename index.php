@@ -60,26 +60,42 @@
   náhodnú veľkosť (od 10px do 50px) a farbu. 
   */
 
-  
-
   echo "</br>";
 
   $nahodneCislo = rand(0, 1000);
+  $counter = 1;
 
   if($nahodneCislo % 2 == 0){
     for($i = 0; $i <= $nahodneCislo; $i+=2){
-      echo $i . ", ";
+      $nahodnaVelkost = rand(10,50);
+      if($counter % 5 == 0){
+        echo "<span style='font-size: {$nahodnaVelkost}px; color: rgb(40, 20, 200);'>$i</span>" . ", ";
+        //  <p style="color: rgb(40, 20, 200);">peter</p>
+      }else{
+        echo $i . ", ";
+      }
+      $counter++;
     }
   }else{
     for($i = 1; $i <= $nahodneCislo; $i+=2){
-      echo $i . ", ";
+      if($counter % 5 == 0){
+        echo $i . ", ";
+      }
+      $counter++;
     }
   }
+
+  // 2 8 4 32 10 8
+  //          __
+  // 3 99 47 43 17
+  //            __
 
   
 
   //var_dump($nahodneCislo);
   ?>
+
+
 
 
 </body>
