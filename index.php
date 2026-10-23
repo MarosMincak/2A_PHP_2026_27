@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<body>
-  <p>peter</p>
 
-  <?php 
+<body>
+  <?php
   // Jednoriadkový komentár
   // Vytvorenie premennej a definovanie hodnoty
   $premenna = "text";
@@ -18,6 +18,7 @@
   Viacriadkový komentár 
   Znak "." sa v PHP používa na spájanie stringov
   */
+  /*
   echo "<p>Ahoj, moje meno je " . $meno . "</p>";
 
   $vysledok = 4 + 6;
@@ -44,7 +45,7 @@
       echo $i . ", ";
     }
   }
-
+  */
   /*
   
   Vytvorte cyklus v ktorom vypíšete 
@@ -65,20 +66,30 @@
   $nahodneCislo = rand(0, 1000);
   $counter = 1;
 
-  if($nahodneCislo % 2 == 0){
-    for($i = 0; $i <= $nahodneCislo; $i+=2){
-      $nahodnaVelkost = rand(10,50);
-      if($counter % 5 == 0){
-        echo "<span style='font-size: {$nahodnaVelkost}px; color: rgb(40, 20, 200);'>$i</span>" . ", ";
-        //  <p style="color: rgb(40, 20, 200);">peter</p>
-      }else{
+  if ($nahodneCislo % 2 == 0) {
+    for ($i = 0; $i <= $nahodneCislo; $i += 2) {
+      $farbaR = rand(0, 255);
+      $farbaG = rand(0, 255);
+      $farbaB = rand(0, 255);
+      $nahodnaVelkost = rand(10, 50);
+      if ($counter % 5 == 0) {
+        echo "<span style='font-size: {$nahodnaVelkost}px; color: 
+        rgb($farbaR, $farbaG, $farbaB);'>$i</span>" . ", ";
+      } else {
         echo $i . ", ";
       }
       $counter++;
-    }
-  }else{
-    for($i = 1; $i <= $nahodneCislo; $i+=2){
-      if($counter % 5 == 0){
+    } 
+  } else {
+    for ($i = 1; $i <= $nahodneCislo; $i += 2) {
+      $farbaR = rand(0, 255);
+      $farbaG = rand(0, 255);
+      $farbaB = rand(0, 255);
+      $nahodnaVelkost = rand(10, 50);
+      if ($counter % 5 == 0) {
+        echo "<span style='font-size: {$nahodnaVelkost}px; color: 
+        rgb($farbaR, $farbaG, $farbaB);'>$i</span>" . ", ";
+      } else {
         echo $i . ", ";
       }
       $counter++;
@@ -90,7 +101,7 @@
   // 3 99 47 43 17
   //            __
 
-  
+
 
   //var_dump($nahodneCislo);
   ?>
@@ -99,4 +110,5 @@
 
 
 </body>
+
 </html>
